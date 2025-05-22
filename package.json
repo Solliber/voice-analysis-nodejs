@@ -1,0 +1,20 @@
+{
+  "name": "voice-analysis-app",
+  "version": "1.0.0",
+  "description": "Voice analysis application using Web Audio API and Meyda",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "meyda": "^5.6.2"
+  },
+  "devDependencies": {
+    "vite": "^4.5.1",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
+  }
+}

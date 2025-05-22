@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Analysis App</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6 text-center">Voice Analysis</h1>
+        
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <button id="startButton" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Start Analysis
+            </button>
+            <button id="stopButton" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 ml-4" disabled>
+                Stop Analysis
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Breathing -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold mb-4">Breathing</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Breath Support</label>
+                        <div id="breathSupport" class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="breath-support-indicator h-full bg-green-500 w-0 transition-all"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Breath Control</label>
+                        <div id="breathControl" class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="breath-control-indicator h-full bg-blue-500 w-0 transition-all"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phonation -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold mb-4">Phonation</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Pitch</label>
+                        <div id="pitch" class="text-lg font-medium">- Hz</div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Volume</label>
+                        <div id="volume" class="text-lg font-medium">- dB</div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Resonance</label>
+                        <div id="resonance" class="text-lg font-medium">-</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Articulation & Intonation -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold mb-4">Articulation & Intonation</h2>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Clarity</label>
+                        <div id="clarity" class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="clarity-indicator h-full bg-purple-500 w-0 transition-all"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-600">Pitch Accuracy</label>
+                        <div id="pitchAccuracy" class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                            <div class="pitch-accuracy-indicator h-full bg-yellow-500 w-0 transition-all"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Voice Register -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h2 class="text-xl font-semibold mb-4">Voice Register</h2>
+                <div id="voiceRegister" class="text-lg font-medium">-</div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
